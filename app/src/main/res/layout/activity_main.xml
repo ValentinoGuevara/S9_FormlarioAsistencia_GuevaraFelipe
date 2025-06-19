@@ -9,214 +9,214 @@
     android:background="#FFF3E0"
     tools:context=".MainActivity">
 
-    <!-- Toolbar en la parte superior -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF5722"
-        android:title="Confirmación Asistencia"
-        android:titleTextColor="#FFFFFF"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="#2BAF99"
         android:elevation="4dp"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <!-- Contenido dentro del NestedScrollView -->
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:titleTextColor="#FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/logo_episi" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+android:id="@+id/scrollView"
+android:layout_width="0dp"
+android:layout_height="0dp"
+android:fillViewport="true"
+app:layout_constraintTop_toBottomOf="@id/toolbar"
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toEndOf="parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="#FFFFFF">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:padding="24dp">
 
-            <!-- CardView para el formulario -->
-            <androidx.cardview.widget.CardView
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_my_calendar"
+                android:tint="#2BAF99"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="12dp"
-                app:cardBackgroundColor="#FFFFFF">
+                android:text="🎉 Confirmación Desfile San Pedrito"
+                android:textSize="22sp"
+                android:textColor="#B71C1C"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
 
-                <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombres"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_person"
+                app:boxStrokeColor="#2BAF99">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextNombres"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="24dp">
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Imagen de calendario -->
-                    <ImageView
-                        android:layout_width="64dp"
-                        android:layout_height="64dp"
-                        android:layout_gravity="center"
-                        android:src="@android:drawable/ic_menu_my_calendar"
-                        android:layout_marginBottom="12dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellidos"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_person"
+                app:boxStrokeColor="#2BAF99">
 
-                    <!-- Título -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="🎉 Confirmación Desfile San Pedrito"
-                        android:textSize="22sp"
-                        android:textColor="#B71C1C"
-                        android:textStyle="bold"
-                        android:gravity="center"
-                        android:layout_marginBottom="16dp" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextApellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Nombres -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Nombres"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        app:startIconDrawable="@drawable/ic_person"
-                        app:boxStrokeColor="#2E7D32">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Código"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_code"
+                app:boxStrokeColor="#2BAF99">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/editTextNombres"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textPersonName" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextCodigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Apellidos -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Apellidos"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        app:startIconDrawable="@drawable/ic_person"
-                        app:boxStrokeColor="#2E7D32">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DNI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_document"
+                app:boxStrokeColor="#2BAF99">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/editTextApellidos"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textPersonName" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextDNI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Código -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Código"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        app:startIconDrawable="@drawable/ic_code"
-                        app:boxStrokeColor="#2E7D32">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo electrónico"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_email"
+                app:boxStrokeColor="#2BAF99">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/editTextCodigo"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="text" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextCorreo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- DNI -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="DNI"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        app:startIconDrawable="@drawable/ic_document"
-                        app:boxStrokeColor="#2E7D32">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teléfono"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:startIconDrawable="@drawable/ic_phone"
+                app:boxStrokeColor="#2BAF99">
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/editTextDNI"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="number" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Correo Electrónico -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Correo electrónico"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        app:startIconDrawable="@drawable/ic_email"
-                        app:boxStrokeColor="#2E7D32">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Eres alumno o docente?"
+                android:textStyle="bold"
+                android:textColor="#2E7D32"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/editTextCorreo"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="textEmailAddress" />
-                    </com.google.android.material.textfield.TextInputLayout>
+            <RadioGroup
+                android:id="@+id/radioGroupRole"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                    <!-- Teléfono -->
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Teléfono"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        app:startIconDrawable="@drawable/ic_phone"
-                        app:boxStrokeColor="#2E7D32">
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radioAlumno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👨‍🎓 Alumno"
+                    android:textColor="#000000" />
 
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/editTextTelefono"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="phone" />
-                    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/radioDocente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👩‍🏫 Docente"
+                    android:layout_marginStart="24dp"
+                    android:textColor="#000000" />
+            </RadioGroup>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="¿Eres alumno o docente?"
-                        android:textStyle="bold"
-                        android:textColor="#2E7D32"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginBottom="8dp" />
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchAsistencia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✅ Confirmo mi asistencia el 26 de junio"
+                android:textColor="#444"
+                android:layout_marginTop="20dp" />
 
-                    <RadioGroup
-                        android:id="@+id/radioGroupRole"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.radiobutton.MaterialRadioButton
-                            android:id="@+id/radioAlumno"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="👨‍🎓 Alumno"
-                            android:textColor="#000000" />
-
-                        <com.google.android.material.radiobutton.MaterialRadioButton
-                            android:id="@+id/radioDocente"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="👩‍🏫 Docente"
-                            android:layout_marginStart="24dp"
-                            android:textColor="#000000" />
-                    </RadioGroup>
-
-                    <com.google.android.material.switchmaterial.SwitchMaterial
-                        android:id="@+id/switchAsistencia"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="✅ Confirmo mi asistencia el 26 de junio"
-                        android:textColor="#444"
-                        android:layout_marginTop="20dp" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/buttonConfirmar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="🎯 Confirmar Asistencia"
-                        android:layout_marginTop="24dp"
-                        android:icon="@android:drawable/ic_menu_send"
-                        android:backgroundTint="#FDD835"
-                        android:textColor="#B71C1C" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonConfirmar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🎯 Confirmar Asistencia"
+                android:layout_marginTop="24dp"
+                android:icon="@android:drawable/ic_menu_send"
+                android:backgroundTint="#2BAF99"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>

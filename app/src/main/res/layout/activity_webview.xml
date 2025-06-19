@@ -4,22 +4,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Toolbar (Navbar) con un botón de regreso -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FF5722"
-        android:title="WebView"
-        android:titleTextColor="#FFFFFF"
-        android:elevation="4dp"
-        android:navigationIcon="@android:drawable/ic_menu_revert"
-        android:navigationContentDescription="Regresar"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:background="#2BAF99"
+    android:title="WebView"
+    android:titleTextColor="#FFFFFF"
+    android:elevation="4dp"
+    android:navigationIcon="@android:drawable/ic_menu_revert"
+    android:navigationContentDescription="Regresar"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- WebView para cargar la página web -->
     <android.webkit.WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"

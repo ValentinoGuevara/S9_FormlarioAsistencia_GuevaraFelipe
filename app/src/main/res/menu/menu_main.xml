@@ -4,11 +4,15 @@
         android:id="@+id/option_1"
         android:title="Abrir WebView"
         android:icon="@android:drawable/ic_menu_info_details"
+        android:titleTextColor="#FFFFFF"
+        android:iconTint="#FF5722"
         android:showAsAction="ifRoom"/>
 
     <item
         android:id="@+id/option_2"
         android:title="Opción 2"
         android:icon="@android:drawable/ic_menu_edit"
+        android:titleTextColor="#FFFFFF"
+        android:iconTint="#FF5722"
         android:showAsAction="ifRoom"/>
 </menu>
