@@ -78,34 +78,6 @@ La app incluye un formulario con campos validados, selección de tipo de usuario
 
 ---
 
-## 🏗️ Estructura del Proyecto
-
-FormularioSanPedrito/
-├── java/com/example/formulariosanpedrito/
-│ ├── MainActivity.kt
-│ ├── WebViewActivity.kt
-│ └── MenuActivity.kt
-├── res/
-│ ├── layout/
-│ │ ├── activity_main.xml
-│ │ ├── activity_webview.xml
-│ │ └── activity_menu.xml
-│ ├── drawable/
-│ │ ├── ic_sanpedrito.xml
-│ │ └── fondo_banner.jpg
-│ └── values/
-│ ├── colors.xml
-│ ├── strings.xml
-│ └── themes.xml
-├── AndroidManifest.xml
-└── README.md
-
-yaml
-Copiar
-Editar
-
----
-
 ## 🔮 Mejoras Futuras
 
 - Validación automática de campos vacíos.
@@ -121,9 +93,6 @@ Editar
 © 2025 - Valentino Guevara
 Prohibido el uso comercial sin autorización expresa.
 
-php-template
-Copiar
-Editar
 
 ---
 
