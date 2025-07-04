@@ -99,7 +99,7 @@ Prohibido el uso comercial sin autorización expresa.
 <div align="center">
   <img src="screenshots3/app_demo.gif" width="300" alt="Demo animada">
   <p>¡Explora el código y contribuye!</p>
-  <a href="https://github.com/ValentinoGuevara/S8_FormularioSanPedrito">
+  <a href="https://github.com/ValentinoGuevara/S9_FormlarioAsistencia_GuevaraFelipe.git">
     <img src="https://img.shields.io/badge/VER_EN_GITHUB-181717?style=for-the-badge&logo=github">
   </a>
 </div>
