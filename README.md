@@ -6,7 +6,7 @@
 **Curso:** Aplicaciones Móviles – Semana 7 y 8  
 
 <div align="center">
-  <img src="screenshots3/imagen1.jpg" width="50%" alt="Portada del proyecto">
+  <img src="screenshots3/imagen1.jpg" width="40%" alt="Portada del proyecto">
 </div>
 
 ---
